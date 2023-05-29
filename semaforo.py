@@ -5,7 +5,7 @@ luzSemaforo = "----Verde-----"
 
 def segundos(t):    
     while (t > 0):
-        print(t)
+        
         t -=1
         time.sleep(1)
 
@@ -36,7 +36,7 @@ def semaforo():
         luzSemaforo = "----Verde-----"
         print(luzSemaforo)
         segundos(30)
-        alterar = int(input("Deseja atraavessar a rua? True/False "))
+        alterar = int(input("Deseja atraavessar a rua? 1 - Sim e 0 - Não "))
         alterar = bool(alterar)
         print(alterar, type(alterar)) 
         if alterar:
@@ -45,8 +45,5 @@ def semaforo():
         else:
             botaoPedestre = False
             semaforo()
-
-        
-            
-            
+           
 semaforo()
