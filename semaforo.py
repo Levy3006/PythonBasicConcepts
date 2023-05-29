@@ -3,9 +3,9 @@ import time
 botaoPedestre = False
 luzSemaforo = "----Verde-----"
 
-def segundos(t):    
+def Countdown(t):    
     while (t > 0):
-        
+        print(t)
         t -=1
         time.sleep(1)
 
@@ -15,13 +15,13 @@ def checagemDoBotao():
     if botaoPedestre == True:
         print("------- Sinal Vermelho em alguns instantes -------")
         print(luzSemaforo)
-        segundos(10)
+        Countdown(10)
         luzSemaforo = "----Amarelo-----"
         print(luzSemaforo, "\n" + "ATENÇÂO!!")
-        segundos(10)
+        Countdown(10)
         luzSemaforo = "------VERMELHO------"
         print(luzSemaforo, "\n" + " PARE!!")
-        segundos(30)
+        Countdown(30)
         luzSemaforo = "----Verde-----"
         print(luzSemaforo,"\n" + "GO!!!")
         semaforo()
@@ -35,10 +35,10 @@ def semaforo():
     while (botaoPedestre == False):
         luzSemaforo = "----Verde-----"
         print(luzSemaforo)
-        segundos(30)
-        alterar = int(input("Deseja atraavessar a rua? 1 - Sim e 0 - Não "))
+        Countdown(30)
+        alterar = int(input("Deseja atraavessar a rua? 1-Sim e 0-Não "))
         alterar = bool(alterar)
-        print(alterar, type(alterar)) 
+        # print(alterar, type(alterar)) linha de codigo destinada a teste
         if alterar:
             botaoPedestre = True
             checagemDoBotao()
