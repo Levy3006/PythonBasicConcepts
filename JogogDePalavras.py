@@ -56,7 +56,7 @@ def verificadorPalavraFinal():
     global display
     global lista_palavras
     global palavraEscolhida
-    print(" -----------DIGITE A PALAVRA FINAL!!-------G---")
+    print(" -----------DIGITE A PALAVRA FINAL!!-----------")
     palavraFinal = input("DIGITE A PALAVRA CERTA: ")
 
     if palavraFinal == respostacerta: 
